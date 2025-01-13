@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Tweet in the code
+{% endblock  %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to Error code channel and this is my project. </h1>
+<a class="btn btn-primary mb-4" href="{% url 'chai_create' %}">Create a Tweet</a>
+  <div class="container row gap-3 ">
+   {% for chai  in chais %}
+   <div class="card" style="width: 18rem;">
+    <img src="{{chai.photo.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{chai.user.username}}</h5>
+      <p class="card-text">{{chai.text}}</p>
+      <a href="{% url 'chai_edit' chai.id %}" class="btn btn-primary">Update the Tweet</a>
+      <a href="{% url 'chai_delete' chai.id %}" class="btn btn-primary">Delete the Tweet</a>
+    </div>
+  </div>
+
+   {% endfor %}
+  </div>
+
+{% endblock  %}
