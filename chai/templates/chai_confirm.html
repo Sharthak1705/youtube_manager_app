@@ -5,5 +5,10 @@
 {% endblock  %}
 
 {% block content %}
-<h1 class="text-center mt-4">Welcome to Error code in my project. </h1>
+<h1 class="text-center mt-4">Are you sure to delete the tweet ? </h1>
+<form method="post">
+{% csrf_token %}
+ <button class="btn btn-danger">Delete</button>
+ <a class='btn btn-success' href="{% url 'chai_list' %}">Cancel</a>
+</form>
 {% endblock  %}
