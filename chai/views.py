@@ -63,3 +63,8 @@ def register(request):
         form = UserRegisterFrom()
     return render(request, 'registration/register.html', {'form': form})
 
+def about(request):
+    return render(request, 'website/about.html')
+
+def contact(request):
+    return render(request, 'website/contact.html')
