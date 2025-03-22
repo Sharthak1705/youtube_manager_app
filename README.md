@@ -17,8 +17,8 @@ First, install Django using pip:
 ```bash
 pip install django
 ```
-
-## Step 2: Create a Django Project
+ 
+## Step 2: Create a Django Project(Optional)
 
 To create a new Django project, run the following command:
 
@@ -31,7 +31,7 @@ Replace `projectname` with the desired name of your project.
 ## Step 3: Navigate to the Project Directory
 
 ```bash
-cd projectname
+cd youtube_manager_app
 ```
 
 ## Step 4: Run the Development Server
